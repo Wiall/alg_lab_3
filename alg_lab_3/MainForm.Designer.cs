@@ -126,7 +126,7 @@ namespace alg_lab_3
             this.ShowAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowAllButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ShowAllButton.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowAllButton.Location = new System.Drawing.Point(37, 289);
+            this.ShowAllButton.Location = new System.Drawing.Point(241, 289);
             this.ShowAllButton.Name = "ShowAllButton";
             this.ShowAllButton.Size = new System.Drawing.Size(198, 48);
             this.ShowAllButton.TabIndex = 6;
@@ -152,9 +152,9 @@ namespace alg_lab_3
             this.PopulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PopulateButton.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PopulateButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PopulateButton.Location = new System.Drawing.Point(241, 347);
+            this.PopulateButton.Location = new System.Drawing.Point(322, 381);
             this.PopulateButton.Name = "PopulateButton";
-            this.PopulateButton.Size = new System.Drawing.Size(119, 32);
+            this.PopulateButton.Size = new System.Drawing.Size(117, 32);
             this.PopulateButton.TabIndex = 8;
             this.PopulateButton.Text = "Populate";
             this.PopulateButton.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@ namespace alg_lab_3
             this.MeasureComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MeasureComp.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MeasureComp.ForeColor = System.Drawing.Color.Transparent;
-            this.MeasureComp.Location = new System.Drawing.Point(118, 347);
+            this.MeasureComp.Location = new System.Drawing.Point(322, 343);
             this.MeasureComp.Name = "MeasureComp";
             this.MeasureComp.Size = new System.Drawing.Size(117, 32);
             this.MeasureComp.TabIndex = 9;
@@ -228,7 +228,7 @@ namespace alg_lab_3
             this.ShowData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ShowData.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ShowData.ForeColor = System.Drawing.Color.Transparent;
-            this.ShowData.Location = new System.Drawing.Point(241, 289);
+            this.ShowData.Location = new System.Drawing.Point(37, 289);
             this.ShowData.Name = "ShowData";
             this.ShowData.Size = new System.Drawing.Size(198, 48);
             this.ShowData.TabIndex = 13;

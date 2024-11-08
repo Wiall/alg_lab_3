@@ -123,7 +123,7 @@ namespace alg_lab_3
             }
             else
             {
-                MessageBox.Show("Некоректний ключ для пошуку");
+                MessageBox.Show(@"Некоректний ключ для пошуку");
             }
         }
         
