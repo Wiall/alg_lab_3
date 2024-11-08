@@ -155,6 +155,7 @@ namespace alg_lab_3
                 return reader.ReadString().Trim();
             }
         }
+        
 
         public List<Record> GetAllRecords()
         {
@@ -207,5 +208,20 @@ namespace alg_lab_3
 
             return (double)totalComparisons / trials;
         }
+        public Record SearchRecord(int key)
+        {
+            var result = BinarySearchWithComparisons(key);
+            if (result.position == -1)
+                return null;
+
+            using (var reader = new BinaryReader(File.Open(mainFilePath, FileMode.Open)))
+            {
+                reader.BaseStream.Seek(result.position, SeekOrigin.Begin);
+                int foundKey = reader.ReadInt32();
+                string data = reader.ReadString().Trim();
+                return new Record { Key = foundKey, Data = data };
+            }
+        }
+
     }
 }

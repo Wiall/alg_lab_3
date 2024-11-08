@@ -45,6 +45,7 @@ namespace alg_lab_3
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteAllButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.ShowData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DataTextBox
@@ -151,9 +152,9 @@ namespace alg_lab_3
             this.PopulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PopulateButton.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PopulateButton.ForeColor = System.Drawing.Color.Transparent;
-            this.PopulateButton.Location = new System.Drawing.Point(346, 294);
+            this.PopulateButton.Location = new System.Drawing.Point(241, 347);
             this.PopulateButton.Name = "PopulateButton";
-            this.PopulateButton.Size = new System.Drawing.Size(93, 38);
+            this.PopulateButton.Size = new System.Drawing.Size(119, 32);
             this.PopulateButton.TabIndex = 8;
             this.PopulateButton.Text = "Populate";
             this.PopulateButton.UseVisualStyleBackColor = true;
@@ -167,9 +168,9 @@ namespace alg_lab_3
             this.MeasureComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MeasureComp.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MeasureComp.ForeColor = System.Drawing.Color.Transparent;
-            this.MeasureComp.Location = new System.Drawing.Point(241, 294);
+            this.MeasureComp.Location = new System.Drawing.Point(118, 347);
             this.MeasureComp.Name = "MeasureComp";
-            this.MeasureComp.Size = new System.Drawing.Size(99, 38);
+            this.MeasureComp.Size = new System.Drawing.Size(117, 32);
             this.MeasureComp.TabIndex = 9;
             this.MeasureComp.Text = "Measure";
             this.MeasureComp.UseVisualStyleBackColor = true;
@@ -218,12 +219,30 @@ namespace alg_lab_3
             this.label1.TabIndex = 12;
             this.label1.Text = "My DBMS";
             // 
+            // ShowData
+            // 
+            this.ShowData.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ShowData.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowData.BackgroundImage")));
+            this.ShowData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowData.FlatAppearance.BorderSize = 0;
+            this.ShowData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowData.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ShowData.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowData.Location = new System.Drawing.Point(241, 289);
+            this.ShowData.Name = "ShowData";
+            this.ShowData.Size = new System.Drawing.Size(198, 48);
+            this.ShowData.TabIndex = 13;
+            this.ShowData.Text = "Show Data";
+            this.ShowData.UseVisualStyleBackColor = false;
+            this.ShowData.Click += new System.EventHandler(this.ShowDataButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(770, 453);
+            this.ClientSize = new System.Drawing.Size(770, 459);
+            this.Controls.Add(this.ShowData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteAllButton);
             this.Controls.Add(this.EditButton);
@@ -243,6 +262,8 @@ namespace alg_lab_3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button ShowData;
 
         private System.Windows.Forms.Label label1;
 

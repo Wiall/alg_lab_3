@@ -104,6 +104,29 @@ namespace alg_lab_3
                 RecordsListBox.Items.Add($"Key: {record.Key}, Data: {record.Data}");
             }
         }
+        
+        private void ShowDataButton_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(KeyTextBox.Text, out int key))
+            {
+                var record = _dbManager.SearchRecord(key);
+                RecordsListBox.Items.Clear();
+
+                if (record != null)
+                {
+                    RecordsListBox.Items.Add($"Key: {record.Key}, Data: {record.Data}");
+                }
+                else
+                {
+                    RecordsListBox.Items.Add("Запис не знайдено");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Некоректний ключ для пошуку");
+            }
+        }
+        
         private void PopulateButton_Click(object sender, EventArgs e)
         {
             _dbManager.PopulateDatabase(10000);
