@@ -1,0 +1,10 @@
+D:\RiderProjects\alg_lab_3\alg_lab_3\bin\Debug\alg_lab_3.exe.config
+D:\RiderProjects\alg_lab_3\alg_lab_3\bin\Debug\alg_lab_3.exe
+D:\RiderProjects\alg_lab_3\alg_lab_3\bin\Debug\alg_lab_3.pdb
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.csproj.AssemblyReference.cache
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.Properties.Resources.resources
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.csproj.GenerateResource.cache
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.csproj.CoreCompileInputs.cache
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.exe
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.pdb
+D:\RiderProjects\alg_lab_3\alg_lab_3\obj\Debug\alg_lab_3.MainForm.resources
