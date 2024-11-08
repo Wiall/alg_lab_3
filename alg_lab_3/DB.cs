@@ -24,7 +24,7 @@ namespace alg_lab_3
         private const string indexFilePath = "index.dat";
         private const int RecordLength = 128;
 
-        public List<IndexEntry> indexList = new List<IndexEntry>();
+        private List<IndexEntry> indexList = new List<IndexEntry>();
 
         public DatabaseManager()
         {
