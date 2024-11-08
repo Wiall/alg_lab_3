@@ -24,7 +24,7 @@ namespace alg_lab_3
         private const string indexFilePath = "index.dat";
         private const int RecordLength = 128;
 
-        private List<IndexEntry> indexList = new List<IndexEntry>();
+        public List<IndexEntry> indexList = new List<IndexEntry>();
 
         public DatabaseManager()
         {
@@ -172,10 +172,22 @@ namespace alg_lab_3
 
         public void PopulateDatabase(int count)
         {
-            Random rand = new Random();
+            int duplicateAttempts = 0;
+            const int maxDuplicates = 10;
             for (int i = 0; i < count; i++)
             {
                 int key = i;
+                if (BinarySearchWithComparisons(key).position != -1)
+                {
+                    duplicateAttempts++;
+
+                    if (duplicateAttempts >= maxDuplicates)
+                    {
+                        MessageBox.Show($@"Заповнення перервано через {maxDuplicates} повторних ключів підряд.", "Попередження");
+                        break;
+                    }
+                    continue;
+                }
                 string data = $"Data_{key}";
                 AddRecord(key, data);
             }
