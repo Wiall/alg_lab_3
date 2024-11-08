@@ -31,6 +31,7 @@ namespace alg_lab_3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.DataTextBox = new System.Windows.Forms.TextBox();
             this.KeyTextBox = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
@@ -41,104 +42,171 @@ namespace alg_lab_3
             this.RecordsListBox = new System.Windows.Forms.ListBox();
             this.PopulateButton = new System.Windows.Forms.Button();
             this.MeasureComp = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.DeleteAllButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DataTextBox
             // 
-            this.DataTextBox.Location = new System.Drawing.Point(96, 161);
+            this.DataTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.DataTextBox.Location = new System.Drawing.Point(241, 107);
             this.DataTextBox.Name = "DataTextBox";
             this.DataTextBox.Size = new System.Drawing.Size(380, 22);
             this.DataTextBox.TabIndex = 0;
             // 
             // KeyTextBox
             // 
-            this.KeyTextBox.Location = new System.Drawing.Point(307, 71);
+            this.KeyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.KeyTextBox.Location = new System.Drawing.Point(37, 107);
             this.KeyTextBox.Name = "KeyTextBox";
-            this.KeyTextBox.Size = new System.Drawing.Size(239, 22);
+            this.KeyTextBox.Size = new System.Drawing.Size(198, 22);
             this.KeyTextBox.TabIndex = 1;
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(96, 189);
+            this.AddButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddButton.BackgroundImage")));
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.ForeColor = System.Drawing.Color.Transparent;
+            this.AddButton.Location = new System.Drawing.Point(37, 181);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(133, 40);
+            this.AddButton.Size = new System.Drawing.Size(198, 48);
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add Record";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += AddButton_Click;
+            this.AddButton.UseMnemonic = false;
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // DataLabel
             // 
-            this.DataLabel.Location = new System.Drawing.Point(96, 140);
+            this.DataLabel.Location = new System.Drawing.Point(241, 86);
             this.DataLabel.Name = "DataLabel";
-            this.DataLabel.Size = new System.Drawing.Size(190, 21);
+            this.DataLabel.Size = new System.Drawing.Size(81, 21);
             this.DataLabel.TabIndex = 3;
             this.DataLabel.Text = "Your data:";
             // 
             // IndexLabel
             // 
-            this.IndexLabel.Location = new System.Drawing.Point(307, 54);
+            this.IndexLabel.Location = new System.Drawing.Point(37, 90);
             this.IndexLabel.Name = "IndexLabel";
-            this.IndexLabel.Size = new System.Drawing.Size(175, 17);
+            this.IndexLabel.Size = new System.Drawing.Size(139, 17);
             this.IndexLabel.TabIndex = 4;
             this.IndexLabel.Text = "Index of data:";
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(97, 235);
+            this.DeleteButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.DeleteButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteButton.BackgroundImage")));
+            this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteButton.FlatAppearance.BorderSize = 0;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.ForeColor = System.Drawing.Color.Transparent;
+            this.DeleteButton.Location = new System.Drawing.Point(37, 235);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(133, 40);
+            this.DeleteButton.Size = new System.Drawing.Size(198, 48);
             this.DeleteButton.TabIndex = 5;
             this.DeleteButton.Text = "Delete Record";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += DeleteButton_Click;
+            this.DeleteButton.UseVisualStyleBackColor = false;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // ShowAllButton
             // 
-            this.ShowAllButton.Location = new System.Drawing.Point(97, 352);
+            this.ShowAllButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ShowAllButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ShowAllButton.BackgroundImage")));
+            this.ShowAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ShowAllButton.FlatAppearance.BorderSize = 0;
+            this.ShowAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowAllButton.ForeColor = System.Drawing.Color.Transparent;
+            this.ShowAllButton.Location = new System.Drawing.Point(37, 289);
             this.ShowAllButton.Name = "ShowAllButton";
-            this.ShowAllButton.Size = new System.Drawing.Size(132, 40);
+            this.ShowAllButton.Size = new System.Drawing.Size(198, 48);
             this.ShowAllButton.TabIndex = 6;
             this.ShowAllButton.Text = "Show All Data";
-            this.ShowAllButton.UseVisualStyleBackColor = true;
-            this.ShowAllButton.Click += ShowAllButton_Click;
-
+            this.ShowAllButton.UseVisualStyleBackColor = false;
+            this.ShowAllButton.Click += new System.EventHandler(this.ShowAllButton_Click);
             // 
             // RecordsListBox
             // 
+            this.RecordsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RecordsListBox.FormattingEnabled = true;
             this.RecordsListBox.ItemHeight = 16;
-            this.RecordsListBox.Location = new System.Drawing.Point(318, 292);
+            this.RecordsListBox.Location = new System.Drawing.Point(458, 181);
             this.RecordsListBox.Name = "RecordsListBox";
-            this.RecordsListBox.Size = new System.Drawing.Size(401, 100);
+            this.RecordsListBox.Size = new System.Drawing.Size(284, 240);
             this.RecordsListBox.TabIndex = 7;
             // 
             // PopulateButton
             // 
-            this.PopulateButton.Location = new System.Drawing.Point(611, 112);
+            this.PopulateButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PopulateButton.BackgroundImage")));
+            this.PopulateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PopulateButton.FlatAppearance.BorderSize = 0;
+            this.PopulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PopulateButton.ForeColor = System.Drawing.Color.Transparent;
+            this.PopulateButton.Location = new System.Drawing.Point(346, 294);
             this.PopulateButton.Name = "PopulateButton";
-            this.PopulateButton.Size = new System.Drawing.Size(107, 28);
+            this.PopulateButton.Size = new System.Drawing.Size(93, 38);
             this.PopulateButton.TabIndex = 8;
             this.PopulateButton.Text = "Populate";
             this.PopulateButton.UseVisualStyleBackColor = true;
-            this.PopulateButton.Click += PopulateButton_Click;
+            this.PopulateButton.Click += new System.EventHandler(this.PopulateButton_Click);
             // 
             // MeasureComp
             // 
-            this.MeasureComp.Location = new System.Drawing.Point(611, 155);
+            this.MeasureComp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MeasureComp.BackgroundImage")));
+            this.MeasureComp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MeasureComp.FlatAppearance.BorderSize = 0;
+            this.MeasureComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MeasureComp.ForeColor = System.Drawing.Color.Transparent;
+            this.MeasureComp.Location = new System.Drawing.Point(241, 294);
             this.MeasureComp.Name = "MeasureComp";
-            this.MeasureComp.Size = new System.Drawing.Size(107, 27);
+            this.MeasureComp.Size = new System.Drawing.Size(99, 38);
             this.MeasureComp.TabIndex = 9;
             this.MeasureComp.Text = "Measure";
             this.MeasureComp.UseVisualStyleBackColor = true;
-            this.MeasureComp.Click += MeasureButton_Click;
+            this.MeasureComp.Click += new System.EventHandler(this.MeasureButton_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.EditButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EditButton.BackgroundImage")));
+            this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EditButton.FlatAppearance.BorderSize = 0;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.ForeColor = System.Drawing.Color.Transparent;
+            this.EditButton.Location = new System.Drawing.Point(241, 181);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(198, 48);
+            this.EditButton.TabIndex = 10;
+            this.EditButton.Text = "Edit Record";
+            this.EditButton.UseVisualStyleBackColor = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // DeleteAllButton
+            // 
+            this.DeleteAllButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.DeleteAllButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DeleteAllButton.BackgroundImage")));
+            this.DeleteAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DeleteAllButton.FlatAppearance.BorderSize = 0;
+            this.DeleteAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAllButton.ForeColor = System.Drawing.Color.Transparent;
+            this.DeleteAllButton.Location = new System.Drawing.Point(241, 235);
+            this.DeleteAllButton.Name = "DeleteAllButton";
+            this.DeleteAllButton.Size = new System.Drawing.Size(198, 48);
+            this.DeleteAllButton.TabIndex = 11;
+            this.DeleteAllButton.Text = "Delete All";
+            this.DeleteAllButton.UseVisualStyleBackColor = false;
+            this.DeleteAllButton.Click += new System.EventHandler(this.DeleteAllButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(770, 453);
+            this.Controls.Add(this.DeleteAllButton);
+            this.Controls.Add(this.EditButton);
             this.Controls.Add(this.MeasureComp);
             this.Controls.Add(this.PopulateButton);
             this.Controls.Add(this.RecordsListBox);
@@ -154,6 +222,11 @@ namespace alg_lab_3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+        
+
+        private System.Windows.Forms.Button DeleteAllButton;
+
+        private System.Windows.Forms.Button EditButton;
 
         private System.Windows.Forms.Button MeasureComp;
 
@@ -166,7 +239,7 @@ namespace alg_lab_3
         private System.Windows.Forms.Label DataLabel;
         private System.Windows.Forms.Label IndexLabel;
 
-        private System.Windows.Forms.Button AddButton;
+        public System.Windows.Forms.Button AddButton;
 
         private System.Windows.Forms.TextBox KeyTextBox;
 

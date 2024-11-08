@@ -122,6 +122,18 @@ namespace alg_lab_3
                 writer.Write(-1); // Позначаємо видалений запис як -1
             }
         }
+        
+        // Видалення усіх записів
+        public void DeleteAllRecords()
+        {
+            indexList.Clear();
+            SaveIndex();
+
+            if (File.Exists(mainFilePath))
+            {
+                File.Delete(mainFilePath);
+            }
+        }
 
         // Редагування запису
         public void EditRecord(int key, string newData)
@@ -173,7 +185,7 @@ namespace alg_lab_3
             Random rand = new Random();
             for (int i = 0; i < count; i++)
             {
-                int key = rand.Next(1, 1000000); // Випадковий ключ у діапазоні [1, 1000000]
+                int key = i;
                 string data = $"Data_{key}";
                 AddRecord(key, data);
             }

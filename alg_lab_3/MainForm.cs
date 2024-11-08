@@ -15,22 +15,85 @@ namespace alg_lab_3
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            int key = int.Parse(KeyTextBox.Text);
             string data = DataTextBox.Text;
-            dbManager.AddRecord(key, data);
+            if (string.IsNullOrWhiteSpace(data))
+            {
+                MessageBox.Show("Поле даних не може бути порожнім!");
+                return;
+            }
+
+            if (int.TryParse(KeyTextBox.Text, out int key))
+            {
+                try
+                {
+                    dbManager.AddRecord(key, data);
+                    MessageBox.Show("Запис успішно додано");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Помилка: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Введіть коректний цілий ключ!");  
+            }
+
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            int key = int.Parse(KeyTextBox.Text);
-            dbManager.DeleteRecord(key);
+            if (int.TryParse(KeyTextBox.Text, out int key))
+            {
+                try
+                {
+                    dbManager.DeleteRecord(key);
+                    MessageBox.Show("Запис успішно видалено");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Помилка: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Введіть коректний цілий ключ!");
+            }
         }
+
+        private void DeleteAllButton_Click(object sender, EventArgs e)
+        {
+            dbManager.DeleteAllRecords();
+            MessageBox.Show("Всі записи видалено.");
+        }
+
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            int key = int.Parse(KeyTextBox.Text);
             string newData = DataTextBox.Text;
-            dbManager.EditRecord(key, newData);
+
+            // Перевірка на коректність ключа та на порожнє значення data
+            if (!int.TryParse(KeyTextBox.Text, out int key))
+            {
+                MessageBox.Show("Введіть коректний цілий ключ!");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(newData))
+            {
+                MessageBox.Show("Поле даних не може бути порожнім!");
+                return;
+            }
+
+            try
+            {
+                dbManager.EditRecord(key, newData);
+                MessageBox.Show("Запис успішно змінено");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Помилка: {ex.Message}");
+            }
         }
 
         private void ShowAllButton_Click(object sender, EventArgs e)
