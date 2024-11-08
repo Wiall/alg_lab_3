@@ -46,6 +46,7 @@ namespace alg_lab_3
             this.DeleteAllButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ShowData = new System.Windows.Forms.Button();
+            this.VisualizeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DataTextBox
@@ -236,12 +237,30 @@ namespace alg_lab_3
             this.ShowData.UseVisualStyleBackColor = false;
             this.ShowData.Click += new System.EventHandler(this.ShowDataButton_Click);
             // 
+            // VisualizeButton
+            // 
+            this.VisualizeButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.VisualizeButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("VisualizeButton.BackgroundImage")));
+            this.VisualizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VisualizeButton.FlatAppearance.BorderSize = 0;
+            this.VisualizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VisualizeButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.VisualizeButton.ForeColor = System.Drawing.Color.Transparent;
+            this.VisualizeButton.Location = new System.Drawing.Point(37, 343);
+            this.VisualizeButton.Name = "VisualizeButton";
+            this.VisualizeButton.Size = new System.Drawing.Size(198, 48);
+            this.VisualizeButton.TabIndex = 14;
+            this.VisualizeButton.Text = "Visualize";
+            this.VisualizeButton.UseVisualStyleBackColor = false;
+            this.VisualizeButton.Click += new System.EventHandler(this.VisualizeButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(770, 459);
+            this.Controls.Add(this.VisualizeButton);
             this.Controls.Add(this.ShowData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteAllButton);
@@ -262,6 +281,8 @@ namespace alg_lab_3
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button VisualizeButton;
 
         private System.Windows.Forms.Button ShowData;
 

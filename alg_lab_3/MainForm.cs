@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace alg_lab_3
@@ -137,6 +138,14 @@ namespace alg_lab_3
         {
             double averageComparisons = _dbManager.MeasureAverageComparisons(15);
             MessageBox.Show($@"Середня кількість порівнянь: {averageComparisons:F2}");
+        }
+
+
+        private void VisualizeButton_Click(object sender, EventArgs e)
+        {
+            _dbManager.LoadIndex();
+            Visualisation form = new Visualisation(_dbManager.indexList, _dbManager);
+            form.Show();
         }
     }
 }

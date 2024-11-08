@@ -18,3 +18,4 @@ D:\RiderProjects\alg_lab_3\alg_lab_31\alg_lab_3\obj\Debug\alg_lab_3.csproj.Gener
 D:\RiderProjects\alg_lab_3\alg_lab_31\alg_lab_3\obj\Debug\alg_lab_3.csproj.CoreCompileInputs.cache
 D:\RiderProjects\alg_lab_3\alg_lab_31\alg_lab_3\obj\Debug\alg_lab_3.exe
 D:\RiderProjects\alg_lab_3\alg_lab_31\alg_lab_3\obj\Debug\alg_lab_3.pdb
+D:\RiderProjects\alg_lab_3\alg_lab_31\alg_lab_3\obj\Debug\alg_lab_3.Visualisation.resources

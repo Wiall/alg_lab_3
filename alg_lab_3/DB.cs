@@ -24,14 +24,14 @@ namespace alg_lab_3
         private const string indexFilePath = "index.dat";
         private const int RecordLength = 128;
 
-        private List<IndexEntry> indexList = new List<IndexEntry>();
+        public List<IndexEntry> indexList = new List<IndexEntry>();
 
         public DatabaseManager()
         {
             LoadIndex();
         }
 
-        private void LoadIndex()
+        public void LoadIndex()
         {
             indexList.Clear();
             if (File.Exists(indexFilePath))
@@ -204,6 +204,7 @@ namespace alg_lab_3
                 int key = rand.Next(1, 1000000);
                 var (position, comparisons) = BinarySearchWithComparisons(key);
                 totalComparisons += comparisons;
+                Console.WriteLine($@"Count of comparisons for test {i} is: {comparisons}");
             }
 
             return (double)totalComparisons / trials;
