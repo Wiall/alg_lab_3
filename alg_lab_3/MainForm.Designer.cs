@@ -44,6 +44,7 @@ namespace alg_lab_3
             this.MeasureComp = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.DeleteAllButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DataTextBox
@@ -69,6 +70,7 @@ namespace alg_lab_3
             this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddButton.FlatAppearance.BorderSize = 0;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddButton.ForeColor = System.Drawing.Color.Transparent;
             this.AddButton.Location = new System.Drawing.Point(37, 181);
             this.AddButton.Name = "AddButton";
@@ -81,17 +83,19 @@ namespace alg_lab_3
             // 
             // DataLabel
             // 
+            this.DataLabel.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataLabel.Location = new System.Drawing.Point(241, 86);
             this.DataLabel.Name = "DataLabel";
-            this.DataLabel.Size = new System.Drawing.Size(81, 21);
+            this.DataLabel.Size = new System.Drawing.Size(119, 21);
             this.DataLabel.TabIndex = 3;
             this.DataLabel.Text = "Your data:";
             // 
             // IndexLabel
             // 
-            this.IndexLabel.Location = new System.Drawing.Point(37, 90);
+            this.IndexLabel.Font = new System.Drawing.Font("Constantia", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IndexLabel.Location = new System.Drawing.Point(37, 86);
             this.IndexLabel.Name = "IndexLabel";
-            this.IndexLabel.Size = new System.Drawing.Size(139, 17);
+            this.IndexLabel.Size = new System.Drawing.Size(177, 21);
             this.IndexLabel.TabIndex = 4;
             this.IndexLabel.Text = "Index of data:";
             // 
@@ -102,6 +106,7 @@ namespace alg_lab_3
             this.DeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteButton.FlatAppearance.BorderSize = 0;
             this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteButton.ForeColor = System.Drawing.Color.Transparent;
             this.DeleteButton.Location = new System.Drawing.Point(37, 235);
             this.DeleteButton.Name = "DeleteButton";
@@ -118,6 +123,7 @@ namespace alg_lab_3
             this.ShowAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ShowAllButton.FlatAppearance.BorderSize = 0;
             this.ShowAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowAllButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ShowAllButton.ForeColor = System.Drawing.Color.Transparent;
             this.ShowAllButton.Location = new System.Drawing.Point(37, 289);
             this.ShowAllButton.Name = "ShowAllButton";
@@ -143,6 +149,7 @@ namespace alg_lab_3
             this.PopulateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PopulateButton.FlatAppearance.BorderSize = 0;
             this.PopulateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PopulateButton.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PopulateButton.ForeColor = System.Drawing.Color.Transparent;
             this.PopulateButton.Location = new System.Drawing.Point(346, 294);
             this.PopulateButton.Name = "PopulateButton";
@@ -158,6 +165,7 @@ namespace alg_lab_3
             this.MeasureComp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MeasureComp.FlatAppearance.BorderSize = 0;
             this.MeasureComp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MeasureComp.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MeasureComp.ForeColor = System.Drawing.Color.Transparent;
             this.MeasureComp.Location = new System.Drawing.Point(241, 294);
             this.MeasureComp.Name = "MeasureComp";
@@ -174,6 +182,7 @@ namespace alg_lab_3
             this.EditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EditButton.FlatAppearance.BorderSize = 0;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.EditButton.ForeColor = System.Drawing.Color.Transparent;
             this.EditButton.Location = new System.Drawing.Point(241, 181);
             this.EditButton.Name = "EditButton";
@@ -190,6 +199,7 @@ namespace alg_lab_3
             this.DeleteAllButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DeleteAllButton.FlatAppearance.BorderSize = 0;
             this.DeleteAllButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAllButton.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DeleteAllButton.ForeColor = System.Drawing.Color.Transparent;
             this.DeleteAllButton.Location = new System.Drawing.Point(241, 235);
             this.DeleteAllButton.Name = "DeleteAllButton";
@@ -199,12 +209,22 @@ namespace alg_lab_3
             this.DeleteAllButton.UseVisualStyleBackColor = false;
             this.DeleteAllButton.Click += new System.EventHandler(this.DeleteAllButton_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(254, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 68);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "My DBMS";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(770, 453);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.DeleteAllButton);
             this.Controls.Add(this.EditButton);
             this.Controls.Add(this.MeasureComp);
@@ -217,12 +237,15 @@ namespace alg_lab_3
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.KeyTextBox);
             this.Controls.Add(this.DataTextBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "MainForm";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
-        
+
+        private System.Windows.Forms.Label label1;
+
 
         private System.Windows.Forms.Button DeleteAllButton;
 
