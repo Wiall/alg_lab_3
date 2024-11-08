@@ -65,6 +65,7 @@ namespace alg_lab_3
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add Record";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += AddButton_Click;
             // 
             // DataLabel
             // 
@@ -90,6 +91,7 @@ namespace alg_lab_3
             this.DeleteButton.TabIndex = 5;
             this.DeleteButton.Text = "Delete Record";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += DeleteButton_Click;
             // 
             // ShowAllButton
             // 
