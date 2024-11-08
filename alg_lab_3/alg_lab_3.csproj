@@ -52,7 +52,7 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
-        <Compile Include="IndexFile.cs" />
+        <Compile Include="DB.cs" />
         <Compile Include="MainForm.cs">
           <SubType>Form</SubType>
         </Compile>

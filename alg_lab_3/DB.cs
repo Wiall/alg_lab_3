@@ -31,7 +31,6 @@ namespace alg_lab_3
             LoadIndex();
         }
 
-        // Завантаження індексу з файлу
         private void LoadIndex()
         {
             indexList.Clear();
@@ -49,7 +48,6 @@ namespace alg_lab_3
             }
         }
 
-        // Збереження індексу у файл
         private void SaveIndex()
         {
             using (var writer = new BinaryWriter(File.Open(indexFilePath, FileMode.Create)))
@@ -62,7 +60,6 @@ namespace alg_lab_3
             }
         }
 
-        // Бінарний пошук
         public (long position, int comparisons) BinarySearchWithComparisons(int key)
         {
             int comparisons = 0;
@@ -81,12 +78,11 @@ namespace alg_lab_3
             return (-1, comparisons);
         }
 
-        // Додавання запису
         public void AddRecord(int key, string data)
         {
             if (BinarySearchWithComparisons(key).position != -1)
             {
-                MessageBox.Show("Запис із таким ключем вже існує");
+                MessageBox.Show(@"Запис із таким ключем вже існує");
                 return;
             }
 
@@ -102,28 +98,25 @@ namespace alg_lab_3
             }
         }
 
-        // Видалення запису
         public void DeleteRecord(int key)
         {
             long position = BinarySearchWithComparisons(key).position;
             if (position == -1)
             {
-                MessageBox.Show("Запис не знайдено");
+                MessageBox.Show(@"Запис не знайдено");
                 return;
             }
 
             indexList.RemoveAll(entry => entry.Key == key);
             SaveIndex();
 
-            // Позначаємо запис як видалений
             using (var writer = new BinaryWriter(File.Open(mainFilePath, FileMode.Open, FileAccess.Write)))
             {
                 writer.Seek((int)position, SeekOrigin.Begin);
-                writer.Write(-1); // Позначаємо видалений запис як -1
+                writer.Write(-1);
             }
         }
-        
-        // Видалення усіх записів
+
         public void DeleteAllRecords()
         {
             indexList.Clear();
@@ -135,13 +128,12 @@ namespace alg_lab_3
             }
         }
 
-        // Редагування запису
         public void EditRecord(int key, string newData)
         {
             long position = BinarySearchWithComparisons(key).position;
             if (position == -1)
             {
-                MessageBox.Show("Запис не знайдено");
+                MessageBox.Show(@"Запис не знайдено");
                 return;
             }
 
@@ -152,7 +144,6 @@ namespace alg_lab_3
             }
         }
 
-        // Отримання запису
         public string GetRecord(int key)
         {
             long position = BinarySearchWithComparisons(key).position;
@@ -165,7 +156,6 @@ namespace alg_lab_3
             }
         }
 
-        // Виведення всіх записів
         public List<Record> GetAllRecords()
         {
             List<Record> records = new List<Record>();
@@ -179,7 +169,7 @@ namespace alg_lab_3
             }
             return records;
         }
-        // Заповнення бази випадковими значеннями
+
         public void PopulateDatabase(int count)
         {
             Random rand = new Random();
@@ -191,7 +181,6 @@ namespace alg_lab_3
             }
         }
 
-        // Вимірювання середньої кількості порівнянь
         public double MeasureAverageComparisons(int trials)
         {
             Random rand = new Random();
